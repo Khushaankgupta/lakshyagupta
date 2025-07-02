@@ -1,44 +1,25 @@
-
 import { useState, useEffect } from 'react';
 import { Crown, School, Trophy, Star, Book, Award, Calendar, Mail, Phone, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-
 const Index = () => {
   const [currentAchievement, setCurrentAchievement] = useState(0);
-  
-  const chessAchievements = [
-    "State Champion U-13 (2024)",
-    "National Tournament Finalist (2023)",
-    "Regional Chess Master Rating 2100+",
-    "School Chess Team Captain",
-    "Defeated 3 Grandmasters in Simuls"
-  ];
-
-  const academicAchievements = [
-    "School Valedictorian (Grade 8)",
-    "Mathematics Olympiad Gold Medal",
-    "Science Fair Regional Winner",
-    "Honor Roll - 4 Consecutive Years",
-    "Academic Excellence Award 2024"
-  ];
-
+  const chessAchievements = ["State Champion U-13 (2024)", "National Tournament Finalist (2023)", "Regional Chess Master Rating 2100+", "School Chess Team Captain", "Defeated 3 Grandmasters in Simuls"];
+  const academicAchievements = ["School Valedictorian (Grade 8)", "Mathematics Olympiad Gold Medal", "Science Fair Regional Winner", "Honor Roll - 4 Consecutive Years", "Academic Excellence Award 2024"];
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentAchievement((prev) => (prev + 1) % chessAchievements.length);
+      setCurrentAchievement(prev => (prev + 1) % chessAchievements.length);
     }, 3000);
     return () => clearInterval(interval);
   }, []);
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+  return <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       {/* Navigation */}
       <nav className="fixed top-0 w-full bg-black/20 backdrop-blur-md z-50 border-b border-white/10">
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
           <div className="flex items-center space-x-2">
             <Crown className="h-8 w-8 text-yellow-400" />
-            <span className="text-xl font-bold">Alex Chen</span>
+            <span className="text-xl font-bold">LASKHYA GUPTA</span>
           </div>
           <div className="hidden md:flex space-x-8">
             <a href="#about" className="hover:text-yellow-400 transition-colors">About</a>
@@ -54,9 +35,7 @@ const Index = () => {
       <section className="pt-24 pb-16 px-6 relative overflow-hidden">
         <div className="container mx-auto text-center relative z-10">
           <div className="animate-fade-in">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-yellow-200 to-yellow-400 bg-clip-text text-transparent">
-              Alex Chen
-            </h1>
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-yellow-200 to-yellow-400 bg-clip-text text-transparent">Lakshya Gupta</h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-4">
               Chess Prodigy • Academic Excellence • Age 13
             </p>
@@ -71,7 +50,7 @@ const Index = () => {
             <Button className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold px-8 py-3">
               View Chess Games
             </Button>
-            <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black px-8 py-3">
+            <Button variant="outline" className="border-white hover:bg-white px-8 py-3 text-zinc-950">
               Academic Portfolio
             </Button>
           </div>
@@ -80,9 +59,15 @@ const Index = () => {
         {/* Floating Chess Pieces */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-20 left-10 animate-bounce text-6xl opacity-20">♔</div>
-          <div className="absolute top-40 right-20 animate-bounce text-4xl opacity-20" style={{animationDelay: '1s'}}>♕</div>
-          <div className="absolute bottom-20 left-20 animate-bounce text-5xl opacity-20" style={{animationDelay: '2s'}}>♖</div>
-          <div className="absolute bottom-40 right-10 animate-bounce text-4xl opacity-20" style={{animationDelay: '0.5s'}}>♗</div>
+          <div className="absolute top-40 right-20 animate-bounce text-4xl opacity-20" style={{
+          animationDelay: '1s'
+        }}>♕</div>
+          <div className="absolute bottom-20 left-20 animate-bounce text-5xl opacity-20" style={{
+          animationDelay: '2s'
+        }}>♖</div>
+          <div className="absolute bottom-40 right-10 animate-bounce text-4xl opacity-20" style={{
+          animationDelay: '0.5s'
+        }}>♗</div>
         </div>
       </section>
 
@@ -102,11 +87,7 @@ const Index = () => {
                 My journey began at age 6 when I first learned to play chess, and since then, I've been 
                 pursuing excellence in every aspect of my life.
               </p>
-              <p className="text-lg text-gray-300 leading-relaxed">
-                Currently maintaining a 2100+ chess rating while being the top student in my grade, 
-                I believe that the strategic thinking required in chess complements my academic pursuits 
-                perfectly.
-              </p>
+              <p className="text-lg text-gray-300 leading-relaxed">Currently maintaining a 1000+ chess rating while being the top student in my grade, I believe that the strategic thinking required in chess complements my academic pursuits perfectly.</p>
               <div className="flex flex-wrap gap-3">
                 <Badge className="bg-yellow-500 text-black">Chess Master</Badge>
                 <Badge className="bg-blue-500">Honor Student</Badge>
@@ -131,7 +112,7 @@ const Index = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="text-3xl font-bold text-white mb-2">2154</div>
+                <div className="text-3xl font-bold text-white mb-2">1104</div>
                 <p className="text-gray-400">USCF Rated</p>
               </CardContent>
             </Card>
@@ -166,13 +147,23 @@ const Index = () => {
           <div className="mt-12">
             <h3 className="text-2xl font-bold mb-6 text-center">Recent Tournament Results</h3>
             <div className="grid md:grid-cols-2 gap-6">
-              {[
-                { event: "National Scholastic Championship", result: "2nd Place", date: "March 2024" },
-                { event: "State Youth Championship", result: "1st Place", date: "February 2024" },
-                { event: "Regional Masters Tournament", result: "3rd Place", date: "January 2024" },
-                { event: "Winter Classic Open", result: "1st Place", date: "December 2023" }
-              ].map((tournament, index) => (
-                <Card key={index} className="bg-slate-800 border-slate-700">
+              {[{
+              event: "National Scholastic Championship",
+              result: "2nd Place",
+              date: "March 2024"
+            }, {
+              event: "State Youth Championship",
+              result: "1st Place",
+              date: "February 2024"
+            }, {
+              event: "Regional Masters Tournament",
+              result: "3rd Place",
+              date: "January 2024"
+            }, {
+              event: "Winter Classic Open",
+              result: "1st Place",
+              date: "December 2023"
+            }].map((tournament, index) => <Card key={index} className="bg-slate-800 border-slate-700">
                   <CardContent className="p-6">
                     <div className="flex justify-between items-start">
                       <div>
@@ -182,8 +173,7 @@ const Index = () => {
                       <span className="text-gray-400 text-sm">{tournament.date}</span>
                     </div>
                   </CardContent>
-                </Card>
-              ))}
+                </Card>)}
             </div>
           </div>
         </div>
@@ -197,8 +187,8 @@ const Index = () => {
             <Card className="bg-slate-800 border-slate-700 text-center">
               <CardContent className="p-6">
                 <School className="h-12 w-12 text-blue-400 mx-auto mb-4" />
-                <div className="text-2xl font-bold text-white">4.0</div>
-                <p className="text-gray-400">GPA</p>
+                <div className="text-2xl font-bold text-white">1.0</div>
+                <p className="text-gray-400">AIR</p>
               </CardContent>
             </Card>
 
@@ -221,7 +211,7 @@ const Index = () => {
             <Card className="bg-slate-800 border-slate-700 text-center">
               <CardContent className="p-6">
                 <Star className="h-12 w-12 text-yellow-400 mx-auto mb-4" />
-                <div className="text-2xl font-bold text-white">99th</div>
+                <div className="text-2xl font-bold text-white">100th</div>
                 <p className="text-gray-400">Percentile</p>
               </CardContent>
             </Card>
@@ -260,12 +250,10 @@ const Index = () => {
               </CardHeader>
               <CardContent>
                 <ul className="space-y-3">
-                  {academicAchievements.map((achievement, index) => (
-                    <li key={index} className="flex items-center text-gray-300">
+                  {academicAchievements.map((achievement, index) => <li key={index} className="flex items-center text-gray-300">
                       <Star className="w-4 h-4 text-yellow-400 mr-3" />
                       {achievement}
-                    </li>
-                  ))}
+                    </li>)}
                 </ul>
               </CardContent>
             </Card>
@@ -279,19 +267,39 @@ const Index = () => {
           <h2 className="text-4xl font-bold text-center mb-12 text-yellow-400">Achievement Timeline</h2>
           <div className="max-w-4xl mx-auto">
             <div className="space-y-8">
-              {[
-                { year: "2024", title: "State Chess Champion U-13", description: "Won the state championship with a perfect 7-0 score", type: "chess" },
-                { year: "2024", title: "Academic Excellence Award", description: "Recognized for maintaining 4.0 GPA while competing nationally", type: "academic" },
-                { year: "2023", title: "Mathematics Olympiad Gold", description: "Placed 1st in regional mathematics competition", type: "academic" },
-                { year: "2023", title: "National Chess Tournament Finalist", description: "Reached finals of National Scholastic Championship", type: "chess" },
-                { year: "2022", title: "Chess Master Rating Achieved", description: "Became youngest player in state to reach 2100+ rating", type: "chess" },
-                { year: "2021", title: "Honor Roll Achievement", description: "First of four consecutive years on honor roll", type: "academic" }
-              ].map((item, index) => (
-                <div key={index} className="flex items-start space-x-6">
+              {[{
+              year: "2024",
+              title: "State Chess Champion U-13",
+              description: "Won the state championship with a perfect 7-0 score",
+              type: "chess"
+            }, {
+              year: "2024",
+              title: "Academic Excellence Award",
+              description: "Recognized for maintaining 4.0 GPA while competing nationally",
+              type: "academic"
+            }, {
+              year: "2023",
+              title: "Mathematics Olympiad Gold",
+              description: "Placed 1st in regional mathematics competition",
+              type: "academic"
+            }, {
+              year: "2023",
+              title: "National Chess Tournament Finalist",
+              description: "Reached finals of National Scholastic Championship",
+              type: "chess"
+            }, {
+              year: "2022",
+              title: "Chess Master Rating Achieved",
+              description: "Became youngest player in state to reach 2100+ rating",
+              type: "chess"
+            }, {
+              year: "2021",
+              title: "Honor Roll Achievement",
+              description: "First of four consecutive years on honor roll",
+              type: "academic"
+            }].map((item, index) => <div key={index} className="flex items-start space-x-6">
                   <div className="flex-shrink-0">
-                    <div className={`w-12 h-12 rounded-full flex items-center justify-center ${
-                      item.type === 'chess' ? 'bg-yellow-500' : 'bg-blue-500'
-                    }`}>
+                    <div className={`w-12 h-12 rounded-full flex items-center justify-center ${item.type === 'chess' ? 'bg-yellow-500' : 'bg-blue-500'}`}>
                       {item.type === 'chess' ? <Crown className="w-6 h-6 text-black" /> : <School className="w-6 h-6 text-white" />}
                     </div>
                   </div>
@@ -302,8 +310,7 @@ const Index = () => {
                     </div>
                     <p className="text-gray-300">{item.description}</p>
                   </div>
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
         </div>
@@ -323,21 +330,21 @@ const Index = () => {
               <Card className="bg-slate-800 border-slate-700">
                 <CardContent className="p-6 text-center">
                   <Mail className="h-8 w-8 text-yellow-400 mx-auto mb-4" />
-                  <p className="text-white">alex.chen.chess@email.com</p>
+                  <p className="text-white">lakshyagupta652@gmail.com</p>
                 </CardContent>
               </Card>
               
               <Card className="bg-slate-800 border-slate-700">
                 <CardContent className="p-6 text-center">
                   <Phone className="h-8 w-8 text-yellow-400 mx-auto mb-4" />
-                  <p className="text-white">Available for chess lessons</p>
+                  <p className="text-white">Available for chess competition</p>
                 </CardContent>
               </Card>
               
               <Card className="bg-slate-800 border-slate-700">
                 <CardContent className="p-6 text-center">
                   <MapPin className="h-8 w-8 text-yellow-400 mx-auto mb-4" />
-                  <p className="text-white">San Francisco, CA</p>
+                  <p className="text-white">Delhi,India</p>
                 </CardContent>
               </Card>
             </div>
@@ -354,14 +361,12 @@ const Index = () => {
         <div className="container mx-auto text-center">
           <div className="flex items-center justify-center space-x-2 mb-4">
             <Crown className="h-6 w-6 text-yellow-400" />
-            <span className="text-lg font-semibold">Alex Chen</span>
+            <span className="text-lg font-semibold">Lakshya Gupta</span>
           </div>
           <p className="text-gray-400">Chess Prodigy • Academic Excellence • Future Grandmaster</p>
-          <p className="text-gray-500 text-sm mt-2">© 2024 Alex Chen. All rights reserved.</p>
+          <p className="text-gray-500 text-sm mt-2">© 2025 lakhsya Gupta. All rights reserved.</p>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
