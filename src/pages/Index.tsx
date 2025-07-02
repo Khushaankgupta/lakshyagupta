@@ -19,7 +19,7 @@ const Index = () => {
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
           <div className="flex items-center space-x-2">
             <Crown className="h-8 w-8 text-yellow-400" />
-            <span className="text-xl font-bold">LASKHYA GUPTA</span>
+            <span className="text-xl font-bold">LAKSHYA GUPTA</span>
           </div>
           <div className="hidden md:flex space-x-8">
             <a href="#about" className="hover:text-yellow-400 transition-colors">About</a>
