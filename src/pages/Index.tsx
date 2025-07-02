@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from 'react';
-import { Chess, School, Trophy, Star, Crown, Book, Award, Calendar, Mail, Phone, MapPin } from 'lucide-react';
+import { Crown, School, Trophy, Star, Book, Award, Calendar, Mail, Phone, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -37,7 +37,7 @@ const Index = () => {
       <nav className="fixed top-0 w-full bg-black/20 backdrop-blur-md z-50 border-b border-white/10">
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
           <div className="flex items-center space-x-2">
-            <Chess className="h-8 w-8 text-yellow-400" />
+            <Crown className="h-8 w-8 text-yellow-400" />
             <span className="text-xl font-bold">Alex Chen</span>
           </div>
           <div className="hidden md:flex space-x-8">
@@ -292,7 +292,7 @@ const Index = () => {
                     <div className={`w-12 h-12 rounded-full flex items-center justify-center ${
                       item.type === 'chess' ? 'bg-yellow-500' : 'bg-blue-500'
                     }`}>
-                      {item.type === 'chess' ? <Chess className="w-6 h-6 text-black" /> : <School className="w-6 h-6 text-white" />}
+                      {item.type === 'chess' ? <Crown className="w-6 h-6 text-black" /> : <School className="w-6 h-6 text-white" />}
                     </div>
                   </div>
                   <div className="flex-grow">
@@ -353,7 +353,7 @@ const Index = () => {
       <footer className="py-8 px-6 border-t border-slate-700">
         <div className="container mx-auto text-center">
           <div className="flex items-center justify-center space-x-2 mb-4">
-            <Chess className="h-6 w-6 text-yellow-400" />
+            <Crown className="h-6 w-6 text-yellow-400" />
             <span className="text-lg font-semibold">Alex Chen</span>
           </div>
           <p className="text-gray-400">Chess Prodigy • Academic Excellence • Future Grandmaster</p>
